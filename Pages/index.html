@@ -20,91 +20,69 @@
         <!-- Main Content -->
         <main class="main-content">
             <!-- Fase 1 Section -->
-            <section class="fase-section">
-                <h2 class="fase-title">Fase 1</h2>
-                
-                <div class="profiles-container">
-                    <div class="profile left-profile">
-                        <div class="profile-circle red-circle">
-                            <div class="progress-ring red-progress" style="--progress: 20">
-                                <svg class="progress-svg" viewBox="0 0 100 100">
-                                    <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
-                                    <circle class="progress-fill" cx="50" cy="50" r="45"></circle>
-                                </svg>
-                            </div>
-                            <div class="devil-avatar red-devil">
-                                <img src="../Imagens/green-toy.png" alt="Avatar">
-                            </div>
-                        <p class="profile-name">NomeExemplo</p>
-                        <p class="profile-level">Level 1</p>
-                    </div>
+                <section class="fase-section">
+                    <h2 class="fase-title">Fase 1</h2>
                     
-                    <div class="connecting-line"></div>
-                    
-                    <div class="profile right-profile">
-                        <div class="profile-circle green-circle">
-                            <div class="progress-ring green-progress" style="--progress: 80">
-                                <svg class="progress-svg" viewBox="0 0 100 100">
-                                    <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
-                                    <circle class="progress-fill" cx="50" cy="50" r="45"></circle>
-                                </svg>
-                            </div>
-                            <div class="devil-avatar green-devil">
-                                <div class="devil-face">
-                                    <div class="devil-horns">
-                                        <div class="horn left-horn"></div>
-                                        <div class="horn right-horn"></div>
-                                    </div>
-                                    <div class="devil-eyes">
-                                        <div class="eye left-eye"></div>
-                                        <div class="eye right-eye"></div>
-                                    </div>
-                                    <div class="devil-mouth happy-mouth"></div>
+                    <div class="profiles-container">
+                        <div class="profile left-profile">
+                            <div class="profile-circle red-circle">
+                                <div class="progress-ring red-progress" style="--progress: 20">
+                                    <svg class="progress-svg" viewBox="0 0 100 100">
+                                        <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
+                                        <circle class="progress-fill" cx="50" cy="50" r="45"></circle>
+                                    </svg>
+                                </div>
+                                <div class="devil-avatar red-devil">
+                                    <img src="/Imagens/green-toy.png" alt="Avatar">
                                 </div>
                             </div>
+                            <p class="profile-name">Ana Silva</p>
+                            <p class="profile-level" id="left-profile-level"></p>
                         </div>
-                        <p class="profile-name">NomeExemplo2</p>
-                        <p class="profile-level">Level 4</p>
+                        
+                        <div class="connecting-line"></div>
+                        
+                        <div class="profile right-profile">
+                            <div class="profile-circle green-circle">
+                                <div class="progress-ring green-progress" style="--progress: 80">
+                                    <svg class="progress-svg" viewBox="0 0 100 100">
+                                        <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
+                                        <circle class="progress-fill" cx="50" cy="50" r="45"></circle>
+                                    </svg>
+                                </div>
+                                <div class="devil-avatar green-devil">
+                                    <img src="../Imagens/red-toy.png" alt="Avatar">
+                                </div>
+                            </div>
+                            <p class="profile-name">Carlos Souza</p>
+                            <p class="profile-level" id="right-profile-level"></p>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- Progress Section -->
-            <section class="progress-section">
-                <div class="progress-header">
-                    <h3>Progresso da dupla</h3>
-                </div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar">
-                        <div class="progress-fill"></div>
-                    </div>
-                </div>
-                <span class="progress-value">Você já economizaram R$ 210 este mês!</span>
-            </section>
+                            <!-- Mission Section -->
+                            <section class="mission-section">
+                                <div class="mission-card">
+                                    <div class="mission-icon">
+                                        <i class="fas fa-bullseye"></i>
+                                    </div>
+                                    <div class="mission-content">
+                                        <h4>Missão do dia</h4>
+                                        <p data-i18n="mission.reduceLeisureSpending">Reduzam 10% dos gastos com lazer hoje!</p>
+                                        <button class="mission-button">Concluir</button>
+                                    </div>
+                                </div>
+                            </section>
 
-            <!-- Mission Section -->
-            <section class="mission-section">
-                <div class="mission-card">
-                    <div class="mission-icon">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <div class="mission-content">
-                        <h4>Missão do dia</h4>
-                        <p>Reduzam 10% dos gastos com lazer hoje!</p>
-                        <button class="mission-button">Concluir</button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Tip Section -->
-            <section class="tip-section">
-                <div class="tip-container">
-                    <div class="tip-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <p class="tip-text">Definam um teto de gastos semanal juntos!</p>
-                </div>
-            </section>
+                            <!-- Tip Section -->
+                            <section class="tip-section">
+                                <div class="tip-container">
+                                    <div class="tip-icon">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </div>
+                                    <p class="tip-text">Definam um teto de gastos semanal juntos!</p>
+                                </div>
+                            </section>
         </main>
 
         <!-- Bottom Navigation -->
@@ -131,6 +109,16 @@
             </div>
         </nav>
     </div>
+<script>
+    // Example dynamic data
+    const leftProfileLevel = 1;
+    const rightProfileLevel = 4;
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('left-profile-level').textContent = `Level ${leftProfileLevel}`;
+        document.getElementById('right-profile-level').textContent = `Level ${rightProfileLevel}`;
+    });
+</script>
 </body>
 </html>
 

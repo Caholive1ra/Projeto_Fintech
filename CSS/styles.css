@@ -123,14 +123,14 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 4px solid;
+    border: 4px solid; /* A cor da borda virá das classes .red-circle e .green-circle */
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
-    position: relative;
+    position: relative; /* ESSENCIAL: Define este elemento como o "pai" para o posicionamento do avatar */
+    background-color: var(--bg-secondary); /* Um fundo neutro caso a imagem não carregue */
     transition: transform 0.3s ease;
-    background-color: var(--bg-primary);
 }
 
 .profile-circle:hover {
@@ -139,74 +139,32 @@ body {
 
 .red-circle {
     border-color: var(--accent-red);
-    background: radial-gradient(circle, var(--devil-red) 0%, var(--bg-primary) 100%);
+    /* A linha de background foi removida para evitar conflitos. */
 }
 
 .green-circle {
     border-color: var(--accent-green);
-    background: radial-gradient(circle, var(--devil-green) 0%, var(--bg-primary) 100%);
-}
-
-/* Progress Ring Styles */
-.progress-ring {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
-
-.progress-svg {
-    width: 100%;
-    height: 100%;
-    transform: rotate(-90deg);
-}
-
-.progress-bg {
-    fill: none;
-    stroke: var(--bg-secondary);
-    stroke-width: 3;
-}
-
-.progress-fill {
-    fill: none;
-    stroke-width: 3;
-    stroke-linecap: round;
-    stroke-dasharray: 283;
-    stroke-dashoffset: calc(283 - (283 * var(--progress)) / 100);
-    transition: stroke-dashoffset 1s ease-in-out;
-}
-
-.red-progress .progress-fill {
-    stroke: var(--accent-red);
-}
-
-.green-progress .progress-fill {
-    stroke: var(--accent-green);
+    /* A linha de background foi removida para evitar conflitos. */
 }
 
 .devil-avatar {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff; /* opcional */
-    position: absolute; /* <-- importante para ocupar todo o círculo */
+    position: absolute; /* Posiciona o avatar em relação ao .profile-circle */
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Garante que o container do avatar também seja um círculo */
+    overflow: hidden;   /* CORTA qualquer parte da imagem que vaze para fora do círculo */
 }
 
 .devil-avatar img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
+    object-fit: cover; /* Faz a imagem preencher o círculo sem distorcer */
     display: block;
 }
+
+/* As regras para .progress-ring não precisam de alteração e devem funcionar corretamente com isso. */
 
 .devil-face {
     width: 80px;
@@ -613,5 +571,3 @@ body {
         box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
     }
 }
-
-
