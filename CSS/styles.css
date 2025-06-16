@@ -1,11 +1,10 @@
-/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Variáveis CSS */
+
 :root {
     --bg-primary: #1E1E1E;
     --bg-secondary: #3D3C3C;
@@ -22,7 +21,7 @@
     --devil-green: #3D9E08;
 }
 
-/* Base Styles */
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     background-color: var(--bg-primary);
@@ -41,7 +40,7 @@ body {
     padding-bottom: 90px;
 }
 
-/* Header */
+
 .header {
     display: flex;
     align-items: center;
@@ -70,12 +69,12 @@ body {
     color: var(--text-secondary);
 }
 
-/* Main Content */
+
 .main-content {
     padding: 0 20px 20px;
 }
 
-/* Fase Section */
+
 .fase-section {
     text-align: center;
     margin-bottom: 50px;
@@ -123,13 +122,13 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 4px solid; /* A cor da borda virá das classes .red-circle e .green-circle */
+    border: 4px solid; 
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
-    position: relative; /* ESSENCIAL: Define este elemento como o "pai" para o posicionamento do avatar */
-    background-color: var(--bg-secondary); /* Um fundo neutro caso a imagem não carregue */
+    position: relative; 
+    background-color: var(--bg-secondary); 
     transition: transform 0.3s ease;
 }
 
@@ -139,22 +138,21 @@ body {
 
 .red-circle {
     border-color: var(--accent-red);
-    /* A linha de background foi removida para evitar conflitos. */
+   
 }
 
 .green-circle {
     border-color: var(--accent-green);
-    /* A linha de background foi removida para evitar conflitos. */
+    
 }
 
 .devil-avatar {
-    position: absolute; /* Posiciona o avatar em relação ao .profile-circle */
+    position: absolute; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 50%; /* Garante que o container do avatar também seja um círculo */
-    /*overflow: hidden;   /* CORTA qualquer parte da imagem que vaze para fora do círculo */
+    border-radius: 50%; 
 }
 
 .devil-avatar img {
@@ -164,7 +162,6 @@ body {
     display: block;
 }
 
-/* As regras para .progress-ring não precisam de alteração e devem funcionar corretamente com isso. */
 
 .devil-face {
     width: 80px;
@@ -221,7 +218,6 @@ body {
     font-weight: 400;
 }
 
-/* Progress Section */
 .progress-section {
     margin-bottom: 30px;
 }
@@ -270,7 +266,6 @@ body {
     transition: width 0.8s ease;
 }
 
-/* Mission Section */
 .mission-section {
     margin-bottom: 25px;
 }
@@ -349,7 +344,7 @@ body {
     transform: translateY(0);
 }
 
-/* Tip Section */
+
 .tip-section {
     margin-bottom: 30px;
 }
@@ -376,7 +371,7 @@ body {
     line-height: 1.4;
 }
 
-/* Bottom Navigation */
+
 .bottom-nav {
     position: fixed;
     bottom: 0;
@@ -433,7 +428,7 @@ body {
     color: var(--text-secondary);
 }
 
-/* Responsive Design */
+
 @media (max-width: 375px) {
     .container {
         max-width: 100%;
@@ -465,7 +460,7 @@ body {
     }
     
     .nav-item span {
-        font-size: 9px;
+        font-size: 20px;
     }
     
     .bottom-nav {
@@ -480,11 +475,11 @@ body {
 
 @media (min-width: 376px) {
     .bottom-nav {
-        border-radius: 0;
+        border-radius: 50;
     }
 }
 
-/* Animations */
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -516,7 +511,6 @@ body {
     }
 }
 
-/* Profile circle pulse animation */
 .profile-circle {
     animation: profilePulse 2s ease-in-out infinite;
 }
@@ -541,4 +535,37 @@ body {
     50% {
         box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
     }
+}
+
+@media (min-width: 1024px) {
+
+  .container {
+    max-width: 1200px; 
+    display: grid;
+    
+    grid-template-columns: 100px 1fr; 
+    grid-template-rows: auto 1fr; 
+    gap: 0 30px; 
+  }
+
+  .header {
+    grid-column: 1 / -1; /
+  }
+  
+  
+  .bottom-nav {
+    position: sticky; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    gap: 35px; 
+    padding: 20px 0;
+    
+    
+    border-top: none; 
+    border-right: 1px solid var(--border-color);
+  }
+
+  .main-content {
+    padding-top: 20px;
+  }
 }

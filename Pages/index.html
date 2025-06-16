@@ -17,7 +17,28 @@
                 <i class="fas fa-bars"></i>
             </div>
         </header>
-
+        <nav class="bottom-nav">
+            <div class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Início</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-list"></i>
+                <span>Transações</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-plus-circle"></i>
+                <span>Adicionar</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-bullseye"></i>
+                <span>Planos</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-ellipsis-h"></i>
+                <span>Mais</span>
+            </div>
+        </nav>
         <!-- Main Content -->
         <main class="main-content">
             <!-- Fase 1 Section -->
@@ -61,54 +82,35 @@
                     </div>
                 </section>
 
-                            <!-- Mission Section -->
-                            <section class="mission-section">
-                                <div class="mission-card">
-                                    <div class="mission-icon">
-                                        <i class="fas fa-bullseye"></i>
-                                    </div>
-                                    <div class="mission-content">
-                                        <h4>Missão do dia</h4>
-                                        <p data-i18n="mission.reduceLeisureSpending">Reduzam 10% dos gastos com lazer hoje!</p>
-                                        <button class="mission-button" id="mission-button">Completar Missão</button>
-                                    </div>
-                                </div>
-                            </section>
+                            <div class="cards-container"> 
 
-                            <!-- Tip Section -->
-                            <section class="tip-section">
-                                <div class="tip-container">
-                                    <div class="tip-icon">
-                                        <i class="fas fa-lightbulb"></i>
-                                    </div>
-                                    <p class="tip-text">Definam um teto de gastos semanal juntos!</p>
-                                </div>
-                            </section>
+                <section class="mission-section">
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="mission-content">
+                            <h4>Missão do dia</h4>
+                            <p data-i18n="mission.reduceLeisureSpending">Reduzam 10% dos gastos com lazer hoje!</p>
+                            <button class="mission-button" id="mission-button">Completar Missão</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="tip-section">
+                    <div class="tip-container">
+                        <div class="tip-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <p class="tip-text">Definam um teto de gastos semanal juntos!</p>
+                    </div>
+                </section>
+
+            </div> 
+
         </main>
-
-        <!-- Bottom Navigation -->
-        <nav class="bottom-nav">
-            <div class="nav-item active">
-                <i class="fas fa-home"></i>
-                <span>Início</span>
-            </div>
-            <div class="nav-item">
-                <i class="fas fa-list"></i>
-                <span>Transações</span>
-            </div>
-            <div class="nav-item">
-                <i class="fas fa-plus-circle"></i>
-                <span>Adicionar</span>
-            </div>
-            <div class="nav-item">
-                <i class="fas fa-bullseye"></i>
-                <span>Planos</span>
-            </div>
-            <div class="nav-item">
-                <i class="fas fa-ellipsis-h"></i>
-                <span>Mais</span>
-            </div>
-        </nav>
+        
+        
     </div>
 <script>
     // Example dynamic data
