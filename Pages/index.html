@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Fintech</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Mude esta linha -->
+    <link rel="stylesheet" href="../CSS/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
@@ -33,7 +34,7 @@
                                     </svg>
                                 </div>
                                 <div class="devil-avatar red-devil">
-                                    <img src="/Imagens/green-toy.png" alt="Avatar">
+                                    <img src="/Imagens/red-toy.png" alt="Avatar">
                                 </div>
                             </div>
                             <p class="profile-name">Ana Silva</p>
@@ -51,7 +52,7 @@
                                     </svg>
                                 </div>
                                 <div class="devil-avatar green-devil">
-                                    <img src="../Imagens/red-toy.png" alt="Avatar">
+                                    <img src="../Imagens/green-toy.png" alt="Avatar">
                                 </div>
                             </div>
                             <p class="profile-name">Carlos Souza</p>
@@ -69,7 +70,7 @@
                                     <div class="mission-content">
                                         <h4>Missão do dia</h4>
                                         <p data-i18n="mission.reduceLeisureSpending">Reduzam 10% dos gastos com lazer hoje!</p>
-                                        <button class="mission-button">Concluir</button>
+                                        <button class="mission-button" id="mission-button">Completar Missão</button>
                                     </div>
                                 </div>
                             </section>
@@ -119,6 +120,6 @@
         document.getElementById('right-profile-level').textContent = `Level ${rightProfileLevel}`;
     });
 </script>
+<script src="../JS/script.js" defer></script>
 </body>
 </html>
-

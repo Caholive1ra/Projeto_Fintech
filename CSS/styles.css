@@ -54,7 +54,7 @@ body {
 
 .menu-icon {
     margin-right: 15px;
-    font-size: 20px;
+    font-size: 35px;
     color: var(--text-secondary);
     cursor: pointer;
     transition: color 0.3s ease;
@@ -78,12 +78,12 @@ body {
 /* Fase Section */
 .fase-section {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .fase-title {
     font-family: 'Orbitron', monospace;
-    font-size: 32px;
+    font-size: 35px;
     font-weight: 900;
     color: var(--accent-green);
     margin-bottom: 30px;
@@ -103,7 +103,7 @@ body {
 
 .connecting-line {
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80px;
@@ -154,13 +154,13 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 50%; /* Garante que o container do avatar também seja um círculo */
-    overflow: hidden;   /* CORTA qualquer parte da imagem que vaze para fora do círculo */
+    /*overflow: hidden;   /* CORTA qualquer parte da imagem que vaze para fora do círculo */
 }
 
 .devil-avatar img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Faz a imagem preencher o círculo sem distorcer */
+    object-fit: scale-down;
     display: block;
 }
 
@@ -203,35 +203,6 @@ body {
 
 .horn.right-horn {
     transform: rotate(15deg);
-}
-
-.devil-eyes {
-    display: flex;
-    gap: 14px;
-    margin-bottom: 14px;
-}
-
-.eye {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #000;
-}
-
-.devil-mouth {
-    width: 28px;
-    height: 14px;
-    border-radius: 0 0 28px 28px;
-    background-color: #000;
-}
-
-.sad-mouth {
-    transform: rotate(180deg);
-    border-radius: 28px 28px 0 0;
-}
-
-.happy-mouth {
-    border-radius: 0 0 28px 28px;
 }
 
 .profile-name {
