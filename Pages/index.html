@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Fintech</title>
-    <!-- Mude esta linha -->
+    <title>Dashboard FinHero</title>
     <link rel="stylesheet" href="../CSS/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
         <header class="header">
             <div class="menu-icon">
                 <i class="fas fa-bars"></i>
@@ -35,85 +33,81 @@
                 <span>Planos</span>
             </div>
             <div class="nav-item">
-                <i class="fas fa-ellipsis-h"></i>
-                <span>Mais</span>
-            </div>
+                    <i class="fas fa-ellipsis-h"></i>
+                    <span>Mais</span>
+                </div>
         </nav>
-        <!-- Main Content -->
         <main class="main-content">
-            <!-- Fase 1 Section -->
-                <section class="fase-section">
-                    <h2 class="fase-title">Fase 1</h2>
+            <section class="fase-section">
+                <h2 class="fase-title">Fase 1</h2>
+                
+                <div class="profiles-container">
+                    <div class="profile left-profile">
+                        <div class="profile-circle red-circle">
+                            <div class="progress-ring red-progress" style="--progress: 20">
+                                <svg class="progress-svg" viewBox="0 0 100 100">
+                                    <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
+                                    <circle class="progress-fill" cx="50" cy="50" r="45"></circle>
+                                </svg>
+                            </div>
+                            <div class="devil-avatar red-devil">
+                                <img src="/Imagens/red-toy.png" alt="Avatar">
+                            </div>
+                        </div>
+                        <p class="profile-name">Ana Silva</p>
+                        <p class="profile-level" id="left-profile-level"></p>
+                    </div>
                     
-                    <div class="profiles-container">
-                        <div class="profile left-profile">
-                            <div class="profile-circle red-circle">
-                                <div class="progress-ring red-progress" style="--progress: 20">
-                                    <svg class="progress-svg" viewBox="0 0 100 100">
-                                        <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
-                                        <circle class="progress-fill" cx="50" cy="50" r="45"></circle>
-                                    </svg>
-                                </div>
-                                <div class="devil-avatar red-devil">
-                                    <img src="/Imagens/red-toy.png" alt="Avatar">
-                                </div>
+                    <div class="connecting-line"></div>
+                    
+                    <div class="profile right-profile">
+                        <div class="profile-circle green-circle">
+                            <div class="progress-ring green-progress" style="--progress: 80">
+                                <svg class="progress-svg" viewBox="0 0 100 100">
+                                    <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
+                                    <circle class="progress-fill" cx="50" cy="50" r="45"></circle>
+                                </svg>
                             </div>
-                            <p class="profile-name">Ana Silva</p>
-                            <p class="profile-level" id="left-profile-level"></p>
-                        </div>
-                        
-                        <div class="connecting-line"></div>
-                        
-                        <div class="profile right-profile">
-                            <div class="profile-circle green-circle">
-                                <div class="progress-ring green-progress" style="--progress: 80">
-                                    <svg class="progress-svg" viewBox="0 0 100 100">
-                                        <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
-                                        <circle class="progress-fill" cx="50" cy="50" r="45"></circle>
-                                    </svg>
-                                </div>
-                                <div class="devil-avatar green-devil">
-                                    <img src="../Imagens/green-toy.png" alt="Avatar">
-                                </div>
+                            <div class="devil-avatar green-devil">
+                                <img src="../Imagens/green-toy.png" alt="Avatar">
                             </div>
-                            <p class="profile-name">Carlos Souza</p>
-                            <p class="profile-level" id="right-profile-level"></p>
                         </div>
+                        <p class="profile-name">Carlos Souza</p>
+                        <p class="profile-level" id="right-profile-level"></p>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                            <div class="cards-container"> 
-
-                <section class="mission-section">
-                    <div class="mission-card">
-                        <div class="mission-icon">
-                            <i class="fas fa-bullseye"></i>
-                        </div>
-                        <div class="mission-content">
-                            <h4>Missão do dia</h4>
-                            <p data-i18n="mission.reduceLeisureSpending">Reduzam 10% dos gastos com lazer hoje!</p>
-                            <button class="mission-button" id="mission-button">Completar Missão</button>
-                        </div>
+            <div class="cards-container">
+            <section class="mission-section">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
                     </div>
-                </section>
-
-                <section class="tip-section">
-                    <div class="tip-container">
-                        <div class="tip-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <p class="tip-text">Definam um teto de gastos semanal juntos!</p>
+                    <div class="mission-content">
+                        <h4>Missão do dia</h4>
+                        <p data-i18n="mission.reduceLeisureSpending">Reduzam 10% dos gastos com lazer hoje!</p>
+                        <button class="mission-button" id="mission-button">Completar Missão</button>
                     </div>
-                </section>
+                </div>
+            </section>
 
-            </div> 
+            <section class="tip-section">
+                <div class="tip-container">
+                    <div class="tip-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <p class="tip-text">Definam um teto de gastos semanal juntos!</p>
+                </div>
+            </section>
 
-        </main>
-        
-        
-    </div>
+        </div> 
+
+    </main>
+    
+    
+</div>
 <script>
-    // Example dynamic data
     const leftProfileLevel = 1;
     const rightProfileLevel = 4;
 
