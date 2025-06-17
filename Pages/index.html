@@ -16,6 +16,65 @@
             </div>
             <h2 class="fase-title">Fase 1</h2>
         </header>
+
+        <main class="main-content">
+            <div class="profiles-container">
+                <div class="profile left-profile">
+                    <div class="profile-circle red-circle">
+                        <div class="devil-avatar">
+                            <img src="../Imagens/red-toy.png" alt="Avatar Ana Silva">
+                        </div>
+                    </div>
+                    <p class="profile-name">Ana Silva</p>
+                    <p class="profile-level">Level 1</p>
+                </div>
+                
+                <div class="connecting-line"></div>
+                
+                <div class="profile right-profile">
+                    <div class="profile-circle green-circle">
+                        <div class="devil-avatar">
+                            <img src="../Imagens/green-toy.png" alt="Avatar Carlos Souza">
+                        </div>
+                    </div>
+                    <p class="profile-name">Carlos Souza</p>
+                    <p class="profile-level">Level 4</p>
+                </div>
+            </div>
+
+            <section class="progress-section">
+                <div class="progress-header">
+                    <h3>Progresso da dupla</h3>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-fill" style="width: 75%;"></div>
+                </div>
+                <span class="progress-value">Você já economizaram R$ 210 este mês!</span>
+            </section>
+            
+            <section class="mission-section">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <img src="../Imagens/alvo.png" alt="Icone">
+                    </div>
+                    <div class="mission-content">
+                        <h4>Missão do dia</h4>
+                        <p>Reduzam 10% dos gastos com lazer hoje!</p>
+                        </div>
+                        <button class="mission-button" id="mission-button">Concluir</button>
+                    </div>
+            </section>
+            
+            <section class="tip-section">
+                <div class="tip-container">
+                    <div class="tip-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <p class="tip-text">Definam um teto de gastos semanal juntos!</p>
+                </div>
+            </section>
+        </main>
+        
         <nav class="bottom-nav">
             <div class="nav-item active">
                 <i class="fas fa-home"></i>
@@ -34,96 +93,11 @@
                 <span>Planos</span>
             </div>
             <div class="nav-item">
-                    <i class="fas fa-ellipsis-h"></i>
-                    <span>Mais</span>
-                </div>
+                <i class="fas fa-ellipsis-h"></i>
+                <span>Mais</span>
+            </div>
         </nav>
-        <main class="main-content">
-                <div class="profiles-container">
-                    <div class="profile left-profile">
-                        <div class="profile-circle red-circle">
-                            <div class="progress-ring red-progress" style="--progress: 20">
-                                <svg class="progress-svg" viewBox="0 0 100 100">
-                                    <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
-                                    <circle class="progress-fill" cx="50" cy="50" r="45"></circle>
-                                </svg>
-                            </div>
-                            <div class="devil-avatar red-devil">
-                                <img src="/Imagens/red-toy.png" alt="Avatar">
-                            </div>
-                        </div>
-                        <p class="profile-name">Ana Silva</p>
-                        <p class="profile-level" id="left-profile-level"></p>
-                    </div>
-                    
-                    <div class="connecting-line"></div>
-                    
-                    <div class="profile right-profile">
-                        <div class="profile-circle green-circle">
-                            <div class="progress-ring green-progress" style="--progress: 80">
-                                <svg class="progress-svg" viewBox="0 0 100 100">
-                                    <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
-                                    <circle class="progress-fill" cx="50" cy="50" r="45"></circle>
-                                </svg>
-                            </div>
-                            <div class="devil-avatar green-devil">
-                                <img src="../Imagens/green-toy.png" alt="Avatar">
-                            </div>
-                        </div>
-                        <p class="profile-name">Carlos Souza</p>
-                        <p class="profile-level" id="right-profile-level"></p>
-                    </div>
-                </div>
-            </section>
-
-            <div class="cards-container">
-                <section class="progress-section">
-                    <div class="progress-header">
-                        <h3>Progresso da dupla</h3>
-                    </div>
-                    <div class="progress-bar-container">
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 75%;"></div> </div>
-                    </div>
-                    <span class="progress-value">Você já economizaram R$ 210 este mês!</span>
-                </section>
-            <section class="mission-section">
-                <div class="mission-card">
-                    <div class="mission-icon">
-                        <img src="../Imagens/alvo.png" alt="Icone">
-                    </div>
-                    <div class="mission-content">
-                        <h4>Missão do dia</h4>
-                        <p>Reduzam 10% dos gastos com lazer hoje!</p>
-                        </div>
-                        <button class="mission-button" id="mission-button">Concluir</button>
-                    </div>
-            </section>
-
-            <section class="tip-section">
-                <div class="tip-container">
-                    <div class="tip-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <p class="tip-text">Definam um teto de gastos semanal juntos!</p>
-                </div>
-            </section>
-
-        </div> 
-
-    </main>
-    
-    
-</div>
-<script>
-    const leftProfileLevel = 1;
-    const rightProfileLevel = 4;
-
-    document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('left-profile-level').textContent = `Level ${leftProfileLevel}`;
-        document.getElementById('right-profile-level').textContent = `Level ${rightProfileLevel}`;
-    });
-</script>
-<script src="../JS/script.js" defer></script>
+    </div>
+    <script src="../JS/script.js" defer></script>
 </body>
 </html>

@@ -137,35 +137,28 @@ body {
     color: var(--text-muted);
 }
 
-.progress-section { margin-bottom: 30px; }
-.progress-header h3 {
-    font-family: 'Orbitron';
-    font-size: 20px;
-    color: var(--accent-yellow);
-}
-.progress-value { margin-top: 10px; }
+.progress-section { margin-bottom: 25px; }
+.progress-header h3 { font-family: 'Orbitron'; font-size: 1.2em; color: var(--accent-yellow); margin-bottom: 10px; }
 .progress-bar-container {
     width: 100%;
-    height: 6px;
+    height: 8px;
     background-color: var(--bg-secondary);
-    border-radius: 6px;
+    border-radius: 4px;
     overflow: hidden;
-    margin-bottom: 10px;
 }
 .progress-fill {
-    width: 75%;
     height: 100%;
-    background: linear-gradient(90deg, var(--accent-green) 50%, var(--accent-yellow) 100%);
-    border-radius: 3px;
+    background: linear-gradient(90deg, var(--accent-green) 0%, var(--accent-yellow) 100%);
+    border-radius: 4px;
 }
-
+.progress-value { font-size: 0.9em; margin-top: 8px; display: block; }
 .mission-section { margin-bottom: 15px; }
 .mission-card {
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-rows: auto auto;
     grid-template-areas:
-        "title title title"
+        "icon title title"
         "icon  text  button";
     align-items: center;
     gap: 10px 15px;
@@ -181,8 +174,6 @@ body {
 }
 
 .mission-icon img {
-    position: relative;
-    bottom: 25px;
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -194,9 +185,6 @@ body {
 }
 
 .mission-content h4 {
-    position: relative;
-    left: 60px;
-    bottom: 7px;
     grid-area: title;
     font-family: 'Orbitron', monospace;
     color: var(--accent-yellow);
@@ -207,8 +195,6 @@ body {
 }
 
 .mission-content p {
-    position: relative;
-    bottom: 20px;
     grid-area: text;
     font-size: 14px;
     color: var(--text-secondary);
@@ -216,8 +202,6 @@ body {
 }
 
 .mission-button {
-    position: relative;
-    top: 10px;
     background-color: var(--accent-green);
     color: white;
     border: none;
@@ -227,7 +211,6 @@ body {
     font-weight: 600;
     cursor: pointer;
     flex-shrink: 0;
-    margin-left: -70px;
     grid-area: button;
 }
 
