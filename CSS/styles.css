@@ -55,7 +55,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     font-size: 35px;
-    color: var(--text-secondary);
+    color: #18A340;
     cursor: pointer;
 }
 
@@ -307,7 +307,7 @@ body {
         top: 50%;
         transform: translateY(-50%);
         font-size: 35px;
-        color: var(--text-secondary);
+        color: #18A340;
         cursor: pointer;
 }
 
@@ -525,3 +525,4 @@ body {
         box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
     }
 }
+
