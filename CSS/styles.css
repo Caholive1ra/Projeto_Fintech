@@ -43,7 +43,8 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    position: relative; 
+    position: relative;
+    bottom: 10px; 
     z-index: 100;
     background-color: var(--bg-primary);
 }
@@ -113,8 +114,10 @@ body {
     background-color: var(--bg-secondary);
 }
 
-.red-circle { border-color: var(--accent-red); }
+.red-circle { border-color: var(--accent-red); 
+}
 .green-circle { border-color: var(--accent-green); }
+
 
 .devil-avatar img {
     width: 90%;
@@ -137,10 +140,17 @@ body {
     color: var(--text-muted);
 }
 
-.progress-section { margin-bottom: 25px; }
-.progress-header h3 { font-family: 'Orbitron'; font-size: 1.2em; color: var(--accent-yellow); margin-bottom: 10px; }
+.progress-section { 
+    margin-bottom: 25px; }
+
+.progress-header h3 { 
+    font-family: 'Orbitron'; 
+    font-size: 1.2em; color: var(--accent-yellow); 
+    margin-bottom: 10px; 
+}
+
 .progress-bar-container {
-    width: 100%;
+    width: 100;
     height: 8px;
     background-color: var(--bg-secondary);
     border-radius: 4px;
@@ -151,8 +161,15 @@ body {
     background: linear-gradient(90deg, var(--accent-green) 0%, var(--accent-yellow) 100%);
     border-radius: 4px;
 }
-.progress-value { font-size: 0.9em; margin-top: 8px; display: block; }
-.mission-section { margin-bottom: 15px; }
+.progress-value { font-size: 0.9em; 
+    margin-top: 8px; 
+    display: block; 
+}
+
+.mission-section { 
+    margin-bottom: 15px; 
+}
+
 .mission-card {
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -283,53 +300,181 @@ body {
     position: relative;
   }
   
-  .menu-icon {
-    font-size: 35px;
-  }
+    .menu-icon {
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 35px;
+        color: var(--text-secondary);
+        cursor: pointer;
+}
 
   .fase-title {
     position: static;
     left: auto;
-    font-size: 35px;
+    font-size: 40px;
   }
 
     .mission-icon {
+        position: relative;
+        left: 20px;
     width: 60px;
     height: 100px;
     }
+
+    .mission-content h4 {
+    position: relative;
+    top: 10px;
+    left: 40px;
+    grid-area: title;
+    font-family: 'Orbitron', monospace;
+    color: var(--accent-yellow);
+    font-size: 35px;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+    .mission-content p {
+    position: relative;
+    bottom: 30px;
+    left: 40px;
+    grid-area: text;
+    font-size: 20px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+    .mission-button {
+    background-color: var(--accent-green);
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    flex-shrink: 0;
+    grid-area: button;
+}
+
+.tip-section { margin-bottom: 30px; }
+.tip-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background-color: var(--bg-secondary);
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-yellow);
+}
+.tip-icon {
+    color: var(--accent-yellow);
+    font-size: 25px;
+}
+.tip-text {
+    font-size: 20px;
+    color: var(--text-secondary);
+}
 
   .bottom-nav {
     position: static;
     transform: none;
     left: auto;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
     padding: 20px 10px;
     gap: 20px;
+    border-radius: 20px;
     border-top: none; 
     border-right: 1px solid var(--border-color);
     grid-row: 2;
     grid-column: 1;
     max-width: none;
   }
+
+  .nav-item {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
   
   .main-content {
     grid-column: 2;
     grid-row: 2;
-    padding-top: 20px;
-  }
-  
-  .profile-circle {
-      width: 120px;
-      height: 120px;
+    padding-top: 10px;
   }
 
+  .progress-header h3 { 
+    font-family: 'Orbitron'; 
+    font-size: 30px; 
+    color: var(--accent-yellow); 
+    margin-bottom: 10px; 
+}
+  
+  .profile-circle {
+      width: 180px;
+      height: 180px;
+  }
+
+  .profile-name {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.profile-level {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
   .connecting-line {
-      top: 60px;
-      width: 100px;
+      top: 90px;
+      width: 500px;
   }
 }
 
+@media (min-width: 390px) {
+    .header {
+    position: relative;
+    bottom: 10px;
+    }
+
+  .bottom-nav {
+    max-width: 390px;
+    padding: 12px 10px;
+  }
+
+  .nav-item i {
+    font-size: 21px; 
+  }
+
+  .nav-item span {
+    font-size: 11px; 
+  }
+}
+
+@media (min-width: 414px) {
+    .header {
+    position: relative;
+    bottom: 10px;
+    }
+
+  .bottom-nav {
+    max-width: 430px; 
+    padding: 12px 15px;
+  }
+
+  .nav-item i {
+    font-size: 22px; 
+  }
+
+  .nav-item span {
+    font-size: 12px;
+  }
+}
 
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
@@ -340,4 +485,30 @@ body {
 .progress-section,
 .tip-section {
     animation: fadeInUp 0.6s ease-out;
+}
+
+.profile-circle {
+    animation: profilePulse 2s ease-in-out infinite;
+}
+
+@keyframes profilePulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(74, 222, 128, 0);
+    }
+}
+
+.red-circle {
+    animation: profilePulseRed 2s ease-in-out infinite;
+}
+
+@keyframes profilePulseRed {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+    }
 }
