@@ -81,6 +81,8 @@ body {
 }
 
 .fase-title {
+    position: relative;
+    right: -480px;
     font-family: 'Orbitron', monospace;
     font-size: 35px;
     font-weight: 900;
@@ -160,46 +162,6 @@ body {
     height: 100%;
     object-fit: scale-down;
     display: block;
-}
-
-
-.devil-face {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.red-devil .devil-face {
-    background-color: var(--accent-red);
-}
-
-.green-devil .devil-face {
-    background-color: var(--accent-green);
-}
-
-.devil-horns {
-    position: absolute;
-    top: -15px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 15px;
-}
-
-.horn {
-    width: 15px;
-    height: 22px;
-    border-radius: 7px 7px 0 0;
-    transform: rotate(-15deg);
-    background-color: #000;
-}
-
-.horn.right-horn {
-    transform: rotate(15deg);
 }
 
 .profile-name {
@@ -433,7 +395,7 @@ body {
 @media (min-width: 1024px) {
 
   .container {
-    max-width: 1200px;
+    max-width: 1024px;
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
@@ -445,13 +407,20 @@ body {
   }
   
   .menu-icon {
+    position: static;
     font-size: 35px;
   }
 
+  .fase-title {
+    position: relative;
+    font-size: 50;
+    text-align: center;
+
+  }
+
   .bottom-nav {
-    position: fixed;
+    position: static;
     left: 150px;
-    
     flex-direction: column;
     justify-content: flex-start;
     padding: 20px 10px;
@@ -495,7 +464,7 @@ body {
 }
 
 .nav-item span {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .bottom-nav {
@@ -565,37 +534,4 @@ body {
     50% {
         box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
     }
-}
-
-@media (min-width: 1024px) {
-
-  .container {
-    max-width: 1200px; 
-    display: grid;
-    
-    grid-template-columns: 100px 1fr; 
-    grid-template-rows: auto 1fr; 
-    gap: 0 30px; 
-  }
-
-  .header {
-    grid-column: 1 / -1; /
-  }
-  
-  
-  .bottom-nav {
-    position: sticky; 
-    flex-direction: column; 
-    justify-content: flex-start; 
-    gap: 35px; 
-    padding: 20px 0;
-    
-    
-    border-top: none; 
-    border-right: 1px solid var(--border-color);
-  }
-
-  .main-content {
-    padding-top: 20px;
-  }
 }
