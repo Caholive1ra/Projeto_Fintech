@@ -230,7 +230,8 @@ body {
 }
 
 .progress-header h3 {
-    font-size: 16px;
+    font-family: 'Orbitron';
+    font-size: 25px;
     font-weight: 600;
     color: var(--accent-yellow);
 }
@@ -412,10 +413,10 @@ body {
 
 .nav-item span {
     font-size: 10px;
-    color: var(--text-muted);
     transition: color 0.3s ease;
     font-weight: 400;
     text-align: center;
+    color: var(--text-muted);
 }
 
 .nav-item.active i,
