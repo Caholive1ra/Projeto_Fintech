@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 :root {
     --bg-primary: #1E1E1E;
     --bg-secondary: #3D3C3C;
@@ -20,7 +19,6 @@
     --devil-red: #9E0808;
     --devil-green: #3D9E08;
 }
-
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -40,57 +38,39 @@ body {
     padding-bottom: 90px;
 }
 
-
 .header {
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 20px 20px 15px;
-    background-color: var(--bg-primary);
-    position: sticky;
-    top: 0;
+    padding: 20px;
+    position: relative; 
     z-index: 100;
+    background-color: var(--bg-primary);
 }
 
 .menu-icon {
-    margin-right: 15px;
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 35px;
     color: var(--text-secondary);
     cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.menu-icon:hover {
-    color: var(--text-primary);
-}
-
-.title {
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--text-secondary);
-}
-
-
-.main-content {
-    padding: 0 20px 20px;
-}
-
-
-.fase-section {
-    text-align: center;
-    margin-bottom: 50px;
 }
 
 .fase-title {
-    position: relative;
-    right: -480px;
     font-family: 'Orbitron', monospace;
     font-size: 35px;
     font-weight: 900;
     color: var(--accent-green);
-    margin-bottom: 30px;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 0 0 10px rgba(74, 222, 128, 0.3);
+    margin: 0;
+}
+
+.main-content {
+    padding: 0 15px 20px;
 }
 
 .profiles-container {
@@ -99,15 +79,15 @@ body {
     align-items: center;
     position: relative;
     margin-bottom: 25px;
-    padding: 0 30px;
+    padding: 0 20px;
 }
 
 .connecting-line {
     position: absolute;
-    top: 35%;
+    top: 50px;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80px;
+    width: 60px;
     height: 2px;
     background-color: var(--border-color);
     z-index: 1;
@@ -124,194 +104,134 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 4px solid; 
+    border: 4px solid;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
-    position: relative; 
-    background-color: var(--bg-secondary); 
-    transition: transform 0.3s ease;
+    position: relative;
+    background-color: var(--bg-secondary);
 }
 
-.profile-circle:hover {
-    transform: scale(1.05);
-}
-
-.red-circle {
-    border-color: var(--accent-red);
-   
-}
-
-.green-circle {
-    border-color: var(--accent-green);
-    
-}
-
-.devil-avatar {
-    position: absolute; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%; 
-}
+.red-circle { border-color: var(--accent-red); }
+.green-circle { border-color: var(--accent-green); }
 
 .devil-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: scale-down;
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
     display: block;
+    margin: auto;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
 }
 
 .profile-name {
-    font-size: 13px;
-    color: var(--text-primary);
-    text-align: center;
-    max-width: 90px;
+    font-size: 14px;
     font-weight: 500;
     margin-bottom: 2px;
 }
 
 .profile-level {
-    font-size: 11px;
+    font-size: 12px;
     color: var(--text-muted);
-    text-align: center;
-    font-weight: 400;
 }
 
-.progress-section {
-    margin-bottom: 30px;
-}
-
-.progress-header {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 12px;
-}
-
+.progress-section { margin-bottom: 30px; }
 .progress-header h3 {
     font-family: 'Orbitron';
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 20px;
     color: var(--accent-yellow);
 }
-
-.progress-value {
-    font-size: 13px;
-    color: var(--text-primary);
-    font-weight: 500;
-    margin-top: 10px;
-    display: block;
-}
-
+.progress-value { margin-top: 10px; }
 .progress-bar-container {
     width: 100%;
     height: 6px;
     background-color: var(--bg-secondary);
-    border-radius: 3px;
+    border-radius: 6px;
     overflow: hidden;
     margin-bottom: 10px;
 }
-
-.progress-bar {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
 .progress-fill {
-    width: 25%;
+    width: 75%;
     height: 100%;
-    background: linear-gradient(90deg, var(--accent-green) 0%, var(--accent-yellow) 100%);
+    background: linear-gradient(90deg, var(--accent-green) 50%, var(--accent-yellow) 100%);
     border-radius: 3px;
-    transition: width 0.8s ease;
 }
 
-.mission-section {
-    margin-bottom: 25px;
-}
-
+.mission-section { margin-bottom: 15px; }
 .mission-card {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "title title title"
+        "icon  text  button";
+    align-items: center;
+    gap: 10px 15px;
     background-color: var(--bg-card);
     border-radius: 12px;
-    padding: 18px;
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
-}
-
-.mission-card:hover {
-    transform: translateY(-2px);
+    padding: 15px;
 }
 
 .mission-icon {
+    grid-area: icon;
     width: 45px;
     height: 45px;
-    background-color: var(--accent-yellow);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    border: 2px solid var(--accent-yellow);
 }
 
-.mission-icon i {
-    font-size: 20px;
-    color: #000;
+.mission-icon img {
+    position: relative;
+    bottom: 25px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(4.5);
 }
 
 .mission-content {
-    flex: 1;
+    display: contents;
 }
 
 .mission-content h4 {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 6px;
+    position: relative;
+    left: 60px;
+    bottom: 7px;
+    grid-area: title;
+    font-family: 'Orbitron', monospace;
+    color: var(--accent-yellow);
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 5px;
 }
 
 .mission-content p {
+    position: relative;
+    bottom: 20px;
+    grid-area: text;
     font-size: 14px;
     color: var(--text-secondary);
-    margin-bottom: 12px;
     line-height: 1.4;
 }
 
 .mission-button {
+    position: relative;
+    top: 10px;
     background-color: var(--accent-green);
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border-radius: 8px;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: none;
-    min-width: 80px;
+    flex-shrink: 0;
+    margin-left: -70px;
+    grid-area: button;
 }
 
-.mission-button:hover {
-    background-color: #22c55e;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(74, 222, 128, 0.3);
-}
-
-.mission-button:active {
-    transform: translateY(0);
-}
-
-
-.tip-section {
-    margin-bottom: 30px;
-}
-
+.tip-section { margin-bottom: 30px; }
 .tip-container {
     display: flex;
     align-items: center;
@@ -321,19 +241,14 @@ body {
     border-radius: 10px;
     border-left: 4px solid var(--accent-yellow);
 }
-
 .tip-icon {
     color: var(--accent-yellow);
     font-size: 18px;
-    flex-shrink: 0;
 }
-
 .tip-text {
     font-size: 14px;
     color: var(--text-secondary);
-    line-height: 1.4;
 }
-
 
 .bottom-nav {
     position: fixed;
@@ -346,7 +261,7 @@ body {
     border-top: 1px solid var(--border-color);
     display: flex;
     justify-content: space-around;
-    padding: 15px 5px 20px;
+    padding: 12px 3px 18px;
     z-index: 1000;
 }
 
@@ -356,44 +271,22 @@ body {
     align-items: center;
     gap: 4px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    padding: 6px 8px;
-    border-radius: 8px;
-    min-width: 50px;
     flex: 1;
 }
-
-.nav-item:hover {
-    transform: translateY(-2px);
-}
-
 .nav-item i {
     font-size: 20px;
     color: var(--text-muted);
-    transition: color 0.3s ease;
 }
-
 .nav-item span {
-    font-size: 10px;
-    transition: color 0.3s ease;
-    font-weight: 400;
-    text-align: center;
+    font-size: 11px;
     color: var(--text-muted);
 }
-
 .nav-item.active i,
 .nav-item.active span {
     color: var(--accent-green);
 }
 
-.nav-item:hover:not(.active) i,
-.nav-item:hover:not(.active) span {
-    color: var(--text-secondary);
-}
-
-
 @media (min-width: 1024px) {
-
   .container {
     max-width: 1024px;
     display: grid;
@@ -404,23 +297,28 @@ body {
 
   .header {
     grid-column: 1 / -1;
+    position: relative;
   }
   
   .menu-icon {
-    position: static;
     font-size: 35px;
   }
 
   .fase-title {
-    position: relative;
-    font-size: 50;
-    text-align: center;
-
+    position: static;
+    left: auto;
+    font-size: 35px;
   }
+
+    .mission-icon {
+    width: 60px;
+    height: 100px;
+    }
 
   .bottom-nav {
     position: static;
-    left: 150px;
+    transform: none;
+    left: auto;
     flex-direction: column;
     justify-content: flex-start;
     padding: 20px 10px;
@@ -429,109 +327,34 @@ body {
     border-right: 1px solid var(--border-color);
     grid-row: 2;
     grid-column: 1;
-    
+    max-width: none;
   }
   
   .main-content {
     grid-column: 2;
     grid-row: 2;
+    padding-top: 20px;
+  }
+  
+  .profile-circle {
+      width: 120px;
+      height: 120px;
+  }
+
+  .connecting-line {
+      top: 60px;
+      width: 100px;
   }
 }
 
-.main-content {
-    padding: 0 15px 20px;
-}
-
-.profiles-container {
-    padding: 0 20px;
-}
-
-.profile-circle {
-    width: 70px;
-    height: 70px;
-}
-
-.profile-initials {
-    font-size: 16px;
-}
-
-.mission-card {
-    padding: 15px;
-}
-
-.nav-item i {
-    font-size: 18px;
-}
-
-.nav-item span {
-    font-size: 15px;
-}
-
-.bottom-nav {
-    padding: 12px 3px 18px;
-}
-
-.nav-item {
-    padding: 4px 6px;
-    min-width: 45px;
-}
-    
-
-
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.fase-section,
-.progress-section,
 .mission-section,
+.progress-section,
 .tip-section {
     animation: fadeInUp 0.6s ease-out;
-}
-
-.progress-fill {
-    animation: progressGrow 1.2s ease-out 0.5s both;
-}
-
-@keyframes progressGrow {
-    from {
-        width: 0%;
-    }
-    to {
-        width: 25%;
-    }
-}
-
-.profile-circle {
-    animation: profilePulse 2s ease-in-out infinite;
-}
-
-@keyframes profilePulse {
-    0%, 100% {
-        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4);
-    }
-    50% {
-        box-shadow: 0 0 0 10px rgba(74, 222, 128, 0);
-    }
-}
-
-.red-circle {
-    animation: profilePulseRed 2s ease-in-out infinite;
-}
-
-@keyframes profilePulseRed {
-    0%, 100% {
-        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
-    }
-    50% {
-        box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
-    }
 }
